@@ -1,0 +1,30 @@
+project:
+  type: book
+  output-dir: Handleiding Statistiekhub
+
+book:
+  title: "Handleiding Statistiekhub"
+  author: "Rogier van der Groep en Rob Kromwijk"
+  favicon: images/basis_variant_4_rgb.png
+  site-url: https://statistiekhub.amsterdam.nl/
+  navbar:
+    title: false
+  sidebar:
+    logo: images/logo-gemeente-amsterdam-large.svg
+    search: false
+  date: 19-05-2026
+  chapters:
+    - index.qmd
+    - cijfers.qmd
+    - privacy.qmd
+    - indicatoren.qmd
+
+#bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+
