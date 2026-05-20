@@ -1,6 +1,5 @@
 project:
   type: book
-  output-dir: Handleiding Statistiekhub
 
 book:
   title: "Handleiding Statistiekhub"
