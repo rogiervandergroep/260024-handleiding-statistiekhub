@@ -2,9 +2,9 @@
 
 Het is verplicht om in publicaties de privacy van de respondenten en personen zo goed mogelijk te beschermen.  
   
-Cijfers of een combinatie van cijfers mogen niet herleidbaar zijn tot op individueel niveau. Dit wordt statistische beveiliging genoemd. [Het CBS heeft hier beschreven](https://www.cbs.nl/-/media/imported/onze-diensten/methoden/gevalideerde-methoden/output/documents/2010/41/statistische-beveiliging-art.pdf?la=nl-nl).  
+Cijfers of een combinatie van cijfers mogen niet herleidbaar zijn tot op **individueel niveau**. Dit wordt statistische beveiliging genoemd. [Het CBS heeft hier een artikel over geschreven](https://www.cbs.nl/-/media/imported/onze-diensten/methoden/gevalideerde-methoden/output/documents/2010/41/statistische-beveiliging-art.pdf?la=nl-nl).  
   
-Ook kan er sprake zijn van groepsonthulling: In publicaties mag geen enkele waarde meer dan 90% van het totaal bevatten. Op deze manier wordt voorkomen dat bepaalde indicatoren tot een herkenbare groep leiden.  
+Ook kan er sprake zijn van **groepsonthulling**: In publicaties mag geen enkele waarde meer dan 90% van het totaal bevatten. Op deze manier wordt voorkomen dat bepaalde indicatoren tot een herkenbare groep leiden.  
   
 Als onderzoek en Statistiek hebben we een algemene set van regels geformuleerd voor cijfers die we publiceren. Deze zijn van toepassing op zowel onze vaste publicaties (bijvoorbeeld kerncijfers), maar bijvoorbeeld ook bij ad-hoc vragen. Deze regels gelden alléén voor privacygevoelige indicatoren in de categorieën bevolking, huishoudens en woningen. Bij woningen is een indicator alleen privacygevoelig als deze betrekking heeft op de bewoners (bijvoorbeeld eigendomsverhouding wel, bouwjaar niet). Wat privacygevoelige indicatoren zijn, is ter beoordeling van de betreffende onderzoeker(s). Daarnaast is bepaald dat het aantal banen van een bedrijf bedrijfsgevoelige informatie is. De privacyregels zijn als volgt:
   

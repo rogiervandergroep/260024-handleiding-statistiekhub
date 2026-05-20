@@ -1,13 +1,17 @@
 project:
   type: book
 
+toc: false
+
 book:
   title: "Handleiding Statistiekhub"
   author: "Rogier van der Groep en Rob Kromwijk"
   favicon: images/basis_variant_4_rgb.png
   site-url: https://statistiekhub.amsterdam.nl/
   navbar:
+    background: white
     title: false
+    search: false
   sidebar:
     logo: images/logo-gemeente-amsterdam-large.svg
     search: false
@@ -24,6 +28,7 @@ format:
   html:
     theme:
       - cosmo
-      - brand
+      - styling.scss
+    code-link: true
 
 

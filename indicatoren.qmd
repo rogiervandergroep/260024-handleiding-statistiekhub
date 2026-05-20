@@ -1,62 +1,91 @@
 # Indicatoren toevoegen aan de statistiekhub {#sec-indicatoren}
 
-Als de geleverde dataset *nieuwe* indicatoren (`measures`) en bijbehorende `metadata` bevat, moet deze worden toegevoegd aan de statistiekhub. Dit kan handmatig of geautomatiseerd worden gedaan via een csv-bestand. Zorg dat het bestand voldoet aan de volgende naamgeving:  
-  
-`<datum>_<thema>_indicatoren.csv`  
-  
-bijvoorbeeld  
-  
+## structuur metadata
+
+
+Als de geleverde dataset nieuwe indicatoren bevat, moet eerst de bijbehorende `metadata` worden toegevoegd aan de statistiekhub. Dit kan handmatig of geautomatiseerd worden gedaan via een csv-bestand. Zorg dat het bestand voldoet aan de volgende naamgeving: `<datum>_<thema>_indicatoren.csv`, bijvoorbeeld: 
+   
 `20230208_veiligheid_indicatoren.csv`  
   
 Het bestand kan eveneens geupload worden op de volgende site:  
-  
+   
 `http://statistiekhub.amsterdam.nl/import_export_job/importjob/`  
   
 Nadat je bent ingelogd op de website, kan je via de knop `import` het csv-bestand importeren.  
-Bij `format` kan je kiezen tussen `"csv"` of `"semicolon csv"`. Bij `Name of model to import` geef je `Observation` aan.  
   
-Het csv-bestand moet onderstaande verplichte attributen bevatten. De overige attributen zijn dus optioneel.   
+- Bij `format` kan je kiezen tussen `csv` of `semicolon csv`. 
+- Bij `Name of model to import` geef je `observation` aan. 
+   
+Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, sommigen zijn optioneel.
   
-::: {style="font-size: 0.7em;"}
+
+## Opbouw indicatorenbestand voor de Statistiekhub
+
+::: {style="font-size: 0.8em;"}
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
 | team              | verantwoordelijk team of afdeling                              |Veiligheid              | verplicht |
-| themes            | thema's, waartoe de indicator gerekend kan worden              | Economie, wonen        | minimaal een verplicht thema |
-| name              | naam van de indicator, correspondeert met measure uit metadata | vest_p                 | verplicht |
+| themes            | thema's, waartoe de indicator gerekend kan worden              | Economie, wonen        | min. een  |
+: 1 Basis 
+  
+
+| kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
+|-------------------|----------------------------------------------------------------|------------------------| ----------|
+| name              | naam indicator, is de measure uit observ.               | vest_p                 | verplicht |
 | label             | korte omschrijving                                             | Vestigingen (%)        | verplicht |
-| label_uk          | korte omschrijving engels                                      | Firms (%)              | verplicht |
-| label_short       | nog kortere omschrijving tbv visualisaties                     | Vestigingen (%)        | verplicht |
-| label_uk          | korte omschrijving engels                                      | Firms (%)              | verplicht |
-| label_uk_short    | nog kortere omschrijving engels tbv visualisaties              | Vestigingen (%)        | verplicht |
 | definition        | omschrijving                                                   | Aandeel Vestigingen    | verplicht |
-| definition_uk     | omschrijving engels                                            | Percentage of Firms    | verplicht |
 | unit              | meeteenheid                                                    | percentage             | verplicht |
 | decimals          | aantal decimalen afronding in publicatietabel                  | 0                      | verplicht |
-| source            | bron                                                           | LISA                   | verplicht |
+| source            | minimaal een bron                                              | LISA                   | verplicht |
 | temporal_type     | boolean: peildatum (TRUE) of niet (FALSE)                      | TRUE                   | verplicht |
-| sensitive         | boolean: aanvinkveld of bepaalde waardes onderdrukt moeten worden|FALSE                 | verplicht |
-| description       | extra veld voor toelichtingen                                  | Tussen 2001 en 2002 is sprake van trendbreuk, omdat ... | |
+| sensitive         | boolean: sensitive (TRUE)                                      | FALSE                  | verplicht |
+: 2 Verplichte velden  
+   
+
+| kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
+|-------------------|----------------------------------------------------------------|------------------------| ----------|
+| label_short       | nog kortere omschrijving tbv visualisaties                     | Vestigingen (%)        | verplicht |
+| frequency         | mate waarin data geupdate wordt                                | een keer per jaar      | verplicht |
+| description       | extra veld voor toelichtingen                                  |                        |           |
 | Parent            | veld om hierarchie in indiactoren te definieren                | nog niet actief        |     |
 | Dimension         | veld subset te definieren                                      | nog niet actief        |  |
-| frequency         | mate waarin data geupdate wordt                                | een keer per jaar      | verplicht |
-| frequency_uk      | mate waarin data geupdate wordt engels                         | once every year        | verplicht |
+: 3 Details  
+   
+
+| kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
+|-------------------|----------------------------------------------------------------|------------------------| ----------|
+| label_uk          | korte omschrijving engels                                      | Firms (%)              | verplicht |
+| definition_uk     | omschrijving engels                                            | Percentage of Firms    | verplicht |
+| label_uk_short    | nog kortere omschrijving tbv visualisaties                     | Vestigingen (%)        | verplicht |
+| frequency_uk      | mate waarin data geupdate wordt                                | once every year        | verplicht |
+| description_uk    | extra veld voor toelichtingen                                  |                        |           |
+: 4 vertaling Engels  
+  
+
+| kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
+|-------------------|----------------------------------------------------------------|------------------------| ----------|
 | calculation       | formule voor berekende waarde                                  | zie @sec-calc          |           |
 | Extra atrr        | json-veld voor styling dashboard                               | zie @sec-attr          |          |
+: 5 Product specifiek  
+  
+
+| kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
+|-------------------|----------------------------------------------------------------|------------------------| ----------|
 | Deprecated        | veld voor indicatoren die niet meer geupdate worden            | FALSE                  |          |
 | Deprecated date   | datum vanaf wanneer de indicator niet meer publiek is          | yyyymmdd               |          |
 | Deprecated reason | reden waarom de indicator niet meer publiek gemaakt wordt      | toelichting            |          |
+: 6 Vervallen  
 
-: Tabel 2 Opbouw indicatorenbestand voor de Statistiekhub
 :::
   
 In de toekomst kan de inicatorenlijst aangevuld worden met onderstaande velden in de Statistiekhub om extra functionaliteiten mogelijk te maken. 
   
-- filter voor deelverzamelingen (denk aan tabel kerncijfers of tabel veiligheidsmonitor)  
-- dimension voor het structuren van indicatoren met verschillende dimensies (denk aan herkomst en leeftijd)
-- parent (voor het koppelen van indicatoren in een hierarchische structuur)
+- `filter` voor het realiseren van deelverzamelingen (denk aan tabel kerncijfers of tabel veiligheidsmonitor)  
+- `dimension` voor het structuren van indicatoren met verschillende dimensies (denk aan herkomst en leeftijd)
+- `parent` (voor het koppelen van indicatoren in een hierarchische structuur)
   
-Hoewel geen officiele richtlijn, adviseren wij om de `naam` van een indicator aan te laten sluiten op het `thema` en de `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
+Hoewel geen officiele richtlijn, adviseren wij om de `name` van een indicator aan te laten sluiten op een `thema` en de `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
   
 `<afkorting thema>_indicatornaam_<afkorting eenheid>` voorbeeld: `o_havo_p`  
   
@@ -75,20 +104,18 @@ Om cijfers automatisch te laten uitrekenen moet in de metadata bij de betreffend
   
 Hieronder staan twee voorbeeldformules:
   
--   `( \$OSTUDWO / ( \$BEVTOTAAL ) ) \* 100`  
--   `( \$IAO / ( \$\[2009-2016\]\|BEVPOTBBV15_64\|\[2017-2999\]\|BEVPOTBBV15_65 ) ) \* 100`  
+-   ( \$OSTUDWO / ( \$BEVTOTAAL ) ) \* 100   
+-   ( \$IAO / ( \$\[2009-2016\]\|BEVPOTBBV15_64\|\[2017-2999\]\|BEVPOTBBV15_65 ) ) \* 100  
   
 ## Extra attr {#sec-attr}
   
-In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij `BBGA_sd_minimum_bevtotaal` en `BBGA_sd_minimum_wvoorrbag`.
+In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij `BBGA_sd_minimum_bevtotaal` en `BBGA_sd_minimum_wvoorrbag`.  
+    
+-  {"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bevtotaal": "", "BBGA_sd_minimum_wvoorrbag": ""}  
   
-````
   
-{"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bevtotaal": "", "BBGA_sd_minimum_wvoorrbag": ""}
+`BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers.  
+   
+`BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
   
-````
-  
-- BBGA_sort wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers 
-
-- BBGA_kleurenpalet bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.
-- BBGA_sd_minimum_bevtotaal en BBGA_sd_minimum_wvoorrbag zijn minimum-waardes van wijken waarop standaarddeviaties berekend worden
+`BBGA_sd_minimum_bevtotaal` en `BBGA_sd_minimum_wvoorrbag` zijn minimum-waardes van wijken waarop standaarddeviaties berekend worden.

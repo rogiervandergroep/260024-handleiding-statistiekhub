@@ -1,20 +1,22 @@
 # Welkom {.unnumbered}
-
+   
 Op deze website leren we jou hoe je data kan toevoegen aan de Statistiekhub. De Statistiekhub is de centrale locatie waar onderzoekers van Onderzoek & Statistiek van de Gemeente Amsterdam op een gestructureerde manier gegevens kunnen opslaan.  
   
-Niet alle data zijn geschikt voor de Statistiekhub: in principe is 'de Hub' bedoeld voor de opslag van longitudinale data die op meerdere aggregatieniveaus leverbaar is, bijvoorbeeld op niveau van buurt, wijk, GGW-Gebied, Stadsdeel en stad. Daarnaast is het mogelijk om data op gemeenteniveau van de Metropoolregio Amsterdam toe te voegen en data met afwijkende gebiedsindelingen zoals de wijkindeling in de [Veiligheidsmonitor Amsterdam-Amstelland](https://onderzoek.amsterdam.nl/interactief/dashboard-veiligheid?gebied=52&index=criminaliteit&meting=2026-1&indeling=wijk&subindex=totaal), de [winkelgebiedindeling](https://onderzoek.amsterdam.nl/publicatie/monitor-detailhandel-2024) in de Monitor Detailhandel en bijvoorbeeld de wijkindeling in de [Wonen in de Regio Amsterdam(WIMRA)](https://onderzoek.amsterdam.nl/publicatie/wimra-2025-factsheets-per-gemeente).  
+Niet alle data zijn geschikt voor de Statistiekhub: in principe is 'de Hub' bedoeld voor de opslag van longitudinale data die op meerdere aggregatieniveaus leverbaar is, bijvoorbeeld op niveau van buurt, wijk, GGW-Gebied, Stadsdeel en stad. 
   
-De Portal van de Statistiekhub is hier te vinden:
-- [https://statistiekhub.amsterdam.nl/](https://statistiekhub.amsterdam.nl/)
+Daarnaast is het mogelijk om data op gemeenteniveau van de Metropoolregio Amsterdam toe te voegen en data met afwijkende gebiedsindelingen zoals de wijkindeling in de [Veiligheidsmonitor](https://onderzoek.amsterdam.nl/interactief/dashboard-veiligheid?gebied=52&index=criminaliteit&meting=2026-1&indeling=wijk&subindex=totaal) en bijvoorbeeld de wijkindeling in de [WIMRA](https://onderzoek.amsterdam.nl/publicatie/wimra-2025-factsheets-per-gemeente).  
   
-De data van de Statistiekhub is ontsloten via het volgende API-endpoint:
-- [https://api.data.amsterdam.nl/v1/statistieken/v2](https://api.data.amsterdam.nl/v1/statistieken/v2)
-
-De data uit dit endpoint worden op hun beurt gebruikt door onderzoekers om publicatietabellen te maken en bijvoorbeeld door frontend-specialisten om dashboards tebouwen waaronder [Kerncijfers Amsterdam](https://onderzoek.amsterdam.nl/interactief/dashboard-kerncijfers?tab=indicator&thema=bevolking&indicator=BEVTOTAAL&indeling=ggwgebieden&jaar=2025&gebied=GA01&taal=nl).
-
-De handleiding is als volgt opgebouwd:
-
-- In @sec-cijfers leggen we uit hoe je data toevoegt
-- In @sec-privacy vertellen we wat meer over privacy-geoelige data en statistische beveiliging in de Statistiekhub
-- In @sec-indicatoren leggen we uit hoe je meta-data aanvult, verbetert of toevoegt
-
+De Portal van de Statistiekhub is hier te vinden:  
+- [https://statistiekhub.amsterdam.nl/](https://statistiekhub.amsterdam.nl/)  
+  
+De data van de Statistiekhub is ontsloten via het volgende API-endpoint:  
+- [https://api.data.amsterdam.nl/v1/statistieken/v2](https://api.data.amsterdam.nl/v1/statistieken/v2)  
+  
+De data uit dit endpoint worden op hun beurt gebruikt door onderzoekers om publicatietabellen te maken en bijvoorbeeld door frontend-specialisten om dashboards tebouwen waaronder [Kerncijfers Amsterdam](https://onderzoek.amsterdam.nl/interactief/dashboard-kerncijfers?tab=indicator&thema=bevolking&indicator=BEVTOTAAL&indeling=ggwgebieden&jaar=2025&gebied=GA01&taal=nl).  
+  
+De handleiding is als volgt opgebouwd:  
+  
+- In @sec-cijfers leggen we uit hoe je data toevoegt  
+- In @sec-privacy vertellen we wat meer over privacy-geoelige data en statistische beveiliging in de Statistiekhub  
+- In @sec-indicatoren leggen we uit hoe je meta-data aanvult, verbetert of toevoegt  
+  
