@@ -1,0 +1,21 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: |
+      wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.40/quarto-1.6.40-linux-amd64.deb
+      sudo dpkg -i quarto-1.6.40-linux-amd64.deb
+    displayName: Install Quarto
+
+  - script: quarto render
+    displayName: Render Quarto Book
+
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '_book'
+      skip_app_build: true
+    env:
+      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN)
