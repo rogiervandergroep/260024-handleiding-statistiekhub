@@ -55,7 +55,7 @@ Op basis van de items `spatial_code`, `spatial_type` en `spatial_date` is het mo
 -   Gemeente
   
 Het kan voorkomen dat er cijfers gemaakt worden van onbekende gebieden of restgebieden terwijl het gebied onbekend is. 
-it komt bijvoorbeeld voor bij verkeerd ingevulde postcodes op enquetes, of als het gebied niet bestaat in een specifieke ruimtelijke indeling, maar wel waardes bevat.
+Dit komt bijvoorbeeld voor bij verkeerd ingevulde postcodes op enquetes, of als het gebied niet bestaat in een specifieke ruimtelijke indeling, maar wel waardes bevat.
 Dit geldt bijvoorbeeld voor Westpoort dat geen GGW-gebied is. 
 Voor deze situaties is er per ruimtelijke dimensie een 'restcode' bedacht die gebruikt kan worden om de populatie van alle cijfers sluitend te krijgen. 
   
