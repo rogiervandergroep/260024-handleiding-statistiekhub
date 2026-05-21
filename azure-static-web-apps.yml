@@ -1,0 +1,27 @@
+name: Build and Deploy Quarto Book
+
+trigger:
+  branches:
+    include:
+      - main  # Pas aan naar de branch die je gebruikt
+
+jobs:
+- job: BuildAndDeploy
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - task: UsePythonVersion@1
+    inputs:
+      versionSpec: '3.x'  # Zorg dat Python beschikbaar is voor Quarto
+  - script: |
+      curl -sSL https://quarto.org/download/latest/quarto-linux-amd64.deb -o quarto.deb
+      sudo dpkg -i quarto.deb
+    displayName: Install Quarto
+  - script: |
+      quarto render  # Render je Quarto-boek
+    displayName: Build Quarto Book
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: "_book"  # Map waar Quarto de output plaatst
+      output_location: "/"
+      azure_static_web_apps_api_token: $(deployment_token)
