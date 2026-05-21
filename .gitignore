@@ -45,3 +45,6 @@ docs/
 po/*~
 
 /.quarto/
+
+
+/_book/
