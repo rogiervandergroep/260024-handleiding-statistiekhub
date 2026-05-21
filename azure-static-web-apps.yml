@@ -10,7 +10,10 @@ steps:
       sudo dpkg -i quarto-1.7.2-linux-amd64.deb
     displayName: Install Quarto
 
-  - script: quarto render
+  - script: |
+      quarto render
+      echo "Contents of _book:"
+      ls _book/
     displayName: Render Quarto Book
 
   - task: AzureStaticWebApp@0
