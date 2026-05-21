@@ -18,7 +18,7 @@ steps:
 
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '_book'
+      app_location: '/_book'
       output_location: ''
       skip_app_build: true
     env:
