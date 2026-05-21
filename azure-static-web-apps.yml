@@ -14,11 +14,15 @@ steps:
       quarto render
       echo "Contents of _book:"
       ls _book/
-    displayName: Render Quarto Book
+       displayName: Render Quarto Book
+
+  - script: |
+      cp -r _book/* .
+      displayName: Move book to root
 
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/_book'
+      app_location: '/'
       output_location: ''
       skip_app_build: true
     env:
