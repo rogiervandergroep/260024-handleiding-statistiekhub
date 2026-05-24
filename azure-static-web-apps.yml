@@ -11,7 +11,13 @@ steps:
     displayName: Install Quarto
 
   - script: quarto render
-    displayName: Render Quarto Book
+      echo "=== ROOT ==="
+      ls -la
+      echo "=== BOOK ==="
+      ls -la _book
+      echo "=== INDEX ==="
+      cat _book/index.html | head
+    displayName: Debug Quarto Output
 
   - task: AzureStaticWebApp@0
     inputs:
