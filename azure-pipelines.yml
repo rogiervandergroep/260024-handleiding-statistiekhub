@@ -6,10 +6,10 @@ pool:
 
 steps:
   # 1. R installeren
-  - task: r-lang.r-install.RInstaller.RInstaller@0
+  - script: |
+      sudo apt-get update
+      sudo apt-get install -y r-base
     displayName: 'Install R'
-    inputs:
-      rVersion: 'latest'
 
   # 2. Quarto installeren
   - script: |
