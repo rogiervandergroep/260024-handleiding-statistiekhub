@@ -20,7 +20,7 @@ steps:
 
   # 3. R packages installeren
   - script: |
-      Rscript -e "install.packages(c('rmarkdown', 'knitr'), repos='https://cloud.r-project.org')"
+      sudo Rscript -e "install.packages(c('rmarkdown', 'knitr'), repos='https://cloud.r-project.org')"
     displayName: 'Install R packages'
 
   # 4. Book builden
