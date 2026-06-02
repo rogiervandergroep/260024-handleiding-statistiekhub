@@ -1,0 +1,39 @@
+trigger:
+  - main  # of master, afhankelijk van je branch
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  # 1. R installeren
+  - task: r-lang.r-install.RInstaller.RInstaller@0
+    displayName: 'Install R'
+    inputs:
+      rVersion: 'latest'
+
+  # 2. Quarto installeren
+  - script: |
+      wget -q https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb
+      sudo dpkg -i quarto-linux-amd64.deb
+    displayName: 'Install Quarto'
+
+  # 3. R packages installeren
+  - script: |
+      Rscript -e "install.packages(c('rmarkdown', 'knitr'), repos='https://cloud.r-project.org')"
+    displayName: 'Install R packages'
+
+  # 4. Book builden
+  - script: |
+      quarto render
+    displayName: 'Render Quarto book'
+
+  # 5. Deployen naar Azure Static Web Apps
+  - task: AzureStaticWebApp@0
+    displayName: 'Deploy to Azure Static Web Apps'
+    inputs:
+      app_location: '_book'      # output map van Quarto
+      skip_app_build: true       # wij builden zelf
+      azure_static_web_apps_api_token: $(DEPLOYMENT_TOKEN)
+
+
+# 41f67e9e5b5fdb5598e9641c1722a7c22e8aaf02b6e6b1ad84fef96ae96924bd07-3ff8c238-ad1d-484d-8983-aef84e837f820030904031a6df03
