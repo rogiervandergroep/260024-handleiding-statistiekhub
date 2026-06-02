@@ -33,7 +33,7 @@ steps:
     inputs:
       app_location: '_book'      # output map van Quarto
       skip_app_build: true       # wij builden zelf
-      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_OCEAN_031A6DF03)
+      azure_static_web_apps_api_token: $(DEPLOYMENT_TOKEN)
 
 
 # 41f67e9e5b5fdb5598e9641c1722a7c22e8aaf02b6e6b1ad84fef96ae96924bd07-3ff8c238-ad1d-484d-8983-aef84e837f820030904031a6df03
