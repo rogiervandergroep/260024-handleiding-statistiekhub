@@ -25,21 +25,21 @@ Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, 
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
-| team              | verantwoordelijk team of afdeling                              |Veiligheid              | verplicht |
-| themes            | thema's, waartoe de indicator gerekend kan worden              | Economie, wonen        | min. een  |
+| team              | verantwoordelijk team of afdeling                              | Veiligheid             | verplicht |
+| themes            | thema's, waartoe de indicator gerekend kan worden              | Economie, Wonen        | min. een  |
 : 1 Basis 
   
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
-| name              | naam indicator, is de measure uit observ.               | vest_p                 | verplicht |
+| name              | naam indicator, is de measure uit observ.                      | vest_p                 | verplicht |
 | label             | korte omschrijving                                             | Vestigingen (%)        | verplicht |
 | definition        | omschrijving                                                   | Aandeel Vestigingen    | verplicht |
 | unit              | meeteenheid                                                    | percentage             | verplicht |
 | decimals          | aantal decimalen afronding in publicatietabel                  | 0                      | verplicht |
 | source            | minimaal een bron                                              | LISA                   | verplicht |
 | temporal_type     | boolean: peildatum (TRUE) of niet (FALSE)                      | TRUE                   | verplicht |
-| sensitive         | boolean: sensitive (TRUE)                                      | FALSE                  | verplicht |
+| sensitive         | boolean: sensitive (TRUE) of niet (FALSE)                      | FALSE                  | verplicht |
 : 2 Verplichte velden  
    
 
@@ -104,18 +104,19 @@ Om cijfers automatisch te laten uitrekenen moet in de metadata bij de betreffend
   
 Hieronder staan twee voorbeeldformules:
   
--   ( \$OSTUDWO / ( \$BEVTOTAAL ) ) \* 100   
--   ( \$IAO / ( \$\[2009-2016\]\|BEVPOTBBV15_64\|\[2017-2999\]\|BEVPOTBBV15_65 ) ) \* 100  
+-   `( \$OSTUDWO / ( \$BEVTOTAAL ) ) \* 100`   
+-   `( \$IAO / ( \$\[2009-2016\]\|BEVPOTBBV15_64\|\[2017-2999\]\|BEVPOTBBV15_65 ) ) \* 100`  
   
 ## Extra attr {#sec-attr}
   
-In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij `BBGA_sd_minimum_bevtotaal` en `BBGA_sd_minimum_wvoorrbag`.  
-    
--  {"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bevtotaal": "", "BBGA_sd_minimum_wvoorrbag": ""}  
+In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij `BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag`.  
+  
+  
+`-  {"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bev_totaal": "1000", "BBGA_sd_minimum_wvoor_bag": "20"}`
   
   
 `BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers.  
    
 `BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
   
-`BBGA_sd_minimum_bevtotaal` en `BBGA_sd_minimum_wvoorrbag` zijn minimum-waardes van wijken waarop standaarddeviaties berekend worden.
+`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.
