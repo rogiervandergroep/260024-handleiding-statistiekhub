@@ -41,8 +41,11 @@ img.quarto-cover-image {
 /* Code ------------------------------------------------ */
 
 p code {
-  color: #373a3c;
+  background-color: #aaaaaa;
+  color:#373a3c; 
 }
+
+
 
 p code a:any-link {
   text-decoration: underline;
@@ -99,6 +102,12 @@ main.content {
       padding-left: 0;
       margin-left:0;
 }
+}
+
+
+li code {
+  background-color: #aaaaaa;
+  color:#373a3c; 
 }
 
 main.content {
