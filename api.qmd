@@ -1,0 +1,161 @@
+# Gebruik API {#sec-api}
+
+In dit hoofdstuk wordt uitgelegd hoe je in R en Python direct vanuit de endpoints data kan inlezen
+
+Zoals eerder aangegeven zijn er drie endpoints beschikbaar
+
+- https://api.data.amsterdam.nl/v1/statistieken/v2/indicatoren
+- https://api.data.amsterdam.nl/v1/statistieken/v2/cijfers
+- https://api.data.amsterdam.nl/v1/statistieken/v2/kengetallen 
+
+
+bevat standaarddeviaties die relevant kunnen zijn 
+
+## METHODE 1: data van geselecteerde variabelen ophalen
+
+
+### 1.1 Packages
+```
+library(tidyverse)
+library(jsonlite)
+library(arrow)
+library(glue)
+```
+
+### 1.2 Lijst met beschikbare indicatoren ophalen
+```
+indicatoren_v2 <- fromJSON(
+  "https://api.data.amsterdam.nl/v1/statistieken/v2/indicatoren?_format=json&_pageSize=1000"
+)$`_embedded`$indicatoren  %>% 
+  select(-`_links`)
+```
+
+
+### 1.3 Zoeken naar relevante indicatoren (optioneel)
+```
+# zoek op naam
+indicatoren_v2 %>% select(id, naam, label) %>%
+  filter(grepl("overlast", label, ignore.case = TRUE))
+
+# bekijk de IDs van je indicatoren
+indicatoren_v2 %>% select(id, naam) %>% 
+  filter(naam %in% c("BEVTOTAAL",
+                     "MVERVUILING_R"))
+```
+
+### 1.4 Relevante indicatoren definiëren
+```
+# in v2 van de BBGA api moet je de indicator IDs opgeven ipv de naam
+mijn_indicator_ids <- c(2267,
+                        2709)
+```
+
+### 1.5 Cijfers ophalen
+```
+fetch_cijfers_v2 <- function(indicator_ids) {
+  ids_str <- paste(indicator_ids, collapse = ",")
+  
+  all_results <- list()
+  next_url <- paste0(
+    "https://api.data.amsterdam.nl/v1/statistieken/v2/cijfers",
+    "?_format=json&_pageSize=1000",
+    "&indicatorId%5Bin%5D=", ids_str
+  )
+  
+  while (!is.null(next_url)) {
+    result <- fromJSON(next_url)
+    df <- result$`_embedded`$cijfers
+    all_results <- c(all_results, list(df))
+    next_url <- result$`_links`$`next`$href
+  }
+  
+  bind_rows(all_results) %>% 
+    select(-`_links`)
+}
+
+# Gebruik de IDs uit stap 1
+cijfers <- fetch_cijfers_v2(mijn_indicator_ids)
+```
+
+
+### 1.6 Indicator naam & label koppelen
+```
+cijfers_aangevuld <- cijfers %>% 
+  left_join(
+    indicatoren_v2 |> select(id, naam, label),
+    by = c("indicatorId" = "id")
+    ) %>% 
+  relocate(naam, label, indicatorId, .after = id) %>% 
+  rename("jaar" = "heeftBetrekkingOp")
+```
+
+
+### 1.7 Filter data (optioneel)
+```
+# desgewenst data filteren op bijvoorbeeld gebied of jaar 
+
+cijfers_gefilterd <- cijfers_aangevuld %>% 
+  filter(gebiedType == "Stadsdeel")
+```
+
+
+### 1.8 Export
+```
+# dataframe naam aanpassen afhankelijk van of je ruwe data of gefilterde
+#  data wilt wegschrijven 
+write_parquet(cijfers_gefilterd,
+              glue("data/bbga_kerncijfers_",
+                   format(Sys.Date(), "%Y%m%d"),
+                   ".parquet"))
+```
+
+
+### 1.9 Aanmaken en exporteren readme
+```
+datum <- format(Sys.Date(), "%Y%m%d")
+datum_leesbaar <- format(Sys.Date(), "%d-%m-%Y")
+
+# Maak indicatorenoverzicht
+indicator_lijst <- cijfers_aangevuld %>% 
+  distinct(indicatorId, naam, label) %>%
+  arrange(indicatorId)
+
+# Bouw readme tekst
+readme_regels <- c(
+  glue("Deze BBGA data is gedownload op {datum_leesbaar} en bevat cijfers van de volgende indicatoren:"),
+  "",
+  paste0(sprintf("- [%d] %s: %s", indicator_lijst$indicatorId, indicator_lijst$naam, indicator_lijst$label))
+)
+
+writeLines(
+  readme_regels,
+  glue("data/bbga_kerncijfers_{datum}_readme.txt")
+)
+```
+
+## METHODE 2: bulk data downloaden 
+
+```
+# inlezen Statistiekhub: gedownload van
+#
+# 1. Download de zip
+download.file(
+  url = "https://api.data.amsterdam.nl/bulk-data/csv/statistieken_v2_all_openbaar.csv.zip",
+  destfile = "statistieken_v2_all_openbaar.csv.zip",
+  mode = "wb" # belangrijk voor binaire bestanden op Windows
+)
+
+# 2. Bekijk wat erin zit
+unzip("statistieken_v2_all_openbaar.csv.zip", list = TRUE)
+
+# 3. Alles uitpakken naar een map
+unzip(
+  "statistieken_v2_all_openbaar.csv.zip",
+  exdir = "data/statistiekhub_ruw"
+)
+```
+
+
+
+
+
