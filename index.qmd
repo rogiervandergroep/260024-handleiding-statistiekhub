@@ -14,9 +14,9 @@ De data van de Statistiekhub is ontsloten via het volgende API-endpoint:
   
 De data uit dit endpoint worden gebruikt om publicatietabellen te maken en om dashboards te bouwen waaronder
 
- [Dashboard Kerncijfers Amsterdam](https://onderzoek.amsterdam.nl/interactief/dashboard-kerncijfers)
- [Statistieken O&S](https://onderzoek.amsterdam.nl/statistieken)
-  
+ [Dashboard Kerncijfers Amsterdam](https://onderzoek.amsterdam.nl/interactief/dashboard-kerncijfers)   
+ [Statistieken O&S](https://onderzoek.amsterdam.nl/statistieken)  
+   
 De handleiding is als volgt opgebouwd:  
   
 - In @sec-cijfers leggen we uit hoe je data toevoegt aan de Statistiekhub
