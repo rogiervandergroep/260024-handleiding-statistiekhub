@@ -13,9 +13,9 @@ Zorg dat het bestand voldoet aan de volgende naamgeving: `<datum>_<team>_cijfers
 Ga vervolgens naar de beheerwebsite voor het toevoegen of wijzigen van nieuwe cijfers  
 `http://statistiekhub.amsterdam.nl/import_export_job/importjob/`  
 
-![Afbeelding website import jobs](images/hub_import.png) 
+Nadat je bent ingelogd op de beheerwebsite, kan je via de knop `add import job` het csv-bestand importeren. Je komt op onderstaande pagina terecht.
 
-Nadat je bent ingelogd op de beheerwebsite, kan je via de knop `import` het csv-bestand importeren. 
+![Afbeelding website add import jobs](images/hub_import.png) 
   
 - Bij `format` kan je kiezen tussen `csv` of `semicolon csv`.  
 - Bij `Name of model to import` geef je `observation` aan.  
@@ -72,3 +72,20 @@ Op basis van de `temporal_date` en `temporal_type` is het mogelijk een unieke ti
 Als de indicator een waarde op een bepaald moment laat zien, gebruik dan als temporal_type 'peildatum'. 
 
 Indien de gegevens over een periode gaan vul dan de betreffende periode in. Voorbeelden van gegevens over een periode zijn bijvoorbeeld het aantal werklozen, geboortes, misdrijven en startende ondernemingen in een jaar, kwartaal of maand. Een statistiek met als `temporal_date` `20210101` en `temporal_type` `jaar` betreft dus een statistiek over het jaar 2021 (van 1 januari 2021 tot 1 januari 2022). Je vult dus de startdatum in van de periode waar je data over gaat. Zoals eerder aangegeven geef je in de metadata ook aan of de data een `periode` of `peildatum` betreft. Ook hier geldt dat wanneer de data op een andere manier wordt aangeboden dan aangegeven in de metadata dat je dan een foutmelding krijgt.
+
+## dry run en import
+
+Druk vervolgens onderaan op `save`. Daarna kom je terug in scherm 'import jobs' waar het geuploade bestand verschijnt.
+
+![Afbeelding website add import jobs](images/hub_import2.png) 
+
+Vink vervolgens dit bestand aan en selecteer bij `Action`: `perform dry-run`. Met een dry-run wordt getest of de aangeleverde data voldoen aan de voorwaarden. Er verschijnt een foutmelding als dit niet geval is. Bij `summary of changes made by this import` wordt duidelijk waar de fouten zitten.
+
+![Afbeelding website add import jobs](images/hub_import1.png) 
+
+Als er geen foutmelding verschijnt kan je onder `summary of changes` de import controleren en bestuderen welke data zijn toegevoegd of geupdated. 
+
+Vervolgens vink je  weer het bestand aan en selecteer je bij `Action`: `perform import`.
+
+De data staan nu echt in de hub.
+

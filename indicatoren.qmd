@@ -120,3 +120,8 @@ In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de 
 `BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
   
 `BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.
+
+
+## dry run en import
+
+Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een dry-run uit en vervolgens een import. De indicatoren staan nu in de hub.
