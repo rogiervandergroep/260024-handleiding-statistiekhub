@@ -44,5 +44,8 @@ docs/
 # translation temp files
 po/*~
 
+script om book te renderen.r
 
 
+/.quarto/
+**/*.quarto_ipynb
