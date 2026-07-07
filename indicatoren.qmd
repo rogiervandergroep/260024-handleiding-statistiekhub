@@ -16,7 +16,7 @@ Nadat je bent ingelogd op de website, kan je via de knop `import` het csv-bestan
 - Bij `format` kan je kiezen tussen `csv` of `semicolon csv`. Semicolon geniet de voorkeur.
 - Bij `name of model to import` geef je `measure` aan. 
    
-Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, sommigen zijn optioneel.
+Het csv-bestand moet onderstaande attributen bevatten. Sommigen zijn verplicht, anderen optioneel.
   
 ## Opbouw indicatorenbestand voor de Statistiekhub
 
@@ -25,40 +25,40 @@ Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
 | team              | verantwoordelijk team of afdeling                              | Veiligheid             | verplicht |
-| themes            | thema's, waartoe de indicator gerekend kan worden              | Economie, Wonen        | min. een  |
+| themes            | thema's, miimaal een thema, meerdere thema's scheiden met pipe-symbol            | Economie\| Wonen | min. een  |
 : 1 Basis 
   
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
-| name              | naam indicator, is de measure uit observ.                      | vest_p                 | verplicht |
-| label             | korte omschrijving                                             | Vestigingen (%)        | verplicht |
-| definition        | omschrijving                                                   | Aandeel Vestigingen    | verplicht |
+| name              | naam van de indicator, is gelijk aan `measure` uit `observations`     | vestr_p                | verplicht |
+| label             | korte omschrijving     | aandeel vestigingen in de sector R: cultuur, sport en recreatie (%)       | verplicht |
+| definition        | omschrijving van de indicator en methode                       |                        | verplicht |
 | unit              | meeteenheid                                                    | percentage             | verplicht |
-| decimals          | aantal decimalen afronding in publicatietabel                  | 0                      | verplicht |
-| source            | minimaal een bron, meerdere bronnen scheiden met pipe-teken    | LISA                   | verplicht |
-| temporal_type     | twee opties: "peildatum"of "periode"                           | peildatum              | verplicht |
+| decimals          | aantal decimalen voor afronding in publicatietabellen          | 0                      | verplicht |
+| source            | minimaal een bron, meerdere bronnen worden gescheiden met het pipe-symbol | LISA\| bewerking O&S   | verplicht |
+| temporal_type     | twee opties: "peildatum" of "periode"                          | peildatum              | verplicht |
 | sensitive         | boolean: sensitive (TRUE) of niet (FALSE)                      | FALSE                  | verplicht |
 : 2 Verplichte velden  
    
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
-| label_short       | nog kortere omschrijving tbv visualisaties                     | Vestigingen (%)        | verplicht |
+| label_short       | nog kortere omschrijving tbv visualisaties                     | vest. sector R (%)     | verplicht |
 | frequency         | mate waarin data geupdate wordt                                | een keer per jaar      | verplicht |
-| description       | extra veld voor toelichtingen                                  |                        |           |
-| Parent            | veld om hierarchie in indiactoren te definieren                | nog niet actief        |     |
-| Dimension         | veld subset te definieren                                      | nog niet actief        |  |
+| description       | extra veld voor toelichtingen op indicator of berekening       |                        |           |
+| Parent            | veld om hierarchie in indicatoren te definieren                | nog niet actief        |     |
+| Dimension         | veld om subset te definieren                                   | nog niet actief        |  |
 : 3 Details  
    
 
 | kolomnaam         | toelichting                                                    |notitiewijze            | veplicht  |
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
-| label_uk          | korte omschrijving engels                                      | Firms (%)              | verplicht |
-| definition_uk     | omschrijving engels                                            | Percentage of Firms    | verplicht |
-| label_uk_short    | nog kortere omschrijving tbv visualisaties                     | Firms  (%)             | verplicht |
+| label_uk          | korte omschrijving engels          | firms in branche R: culture, sports and recreation (%)           | verplicht |
+| definition_uk     | beschrijving van de indicator en methode in engels             |                        | verplicht |
+| label_uk_short    | nog kortere omschrijving tbv visualisaties                     | firms in branche R (%) | verplicht |
 | frequency_uk      | mate waarin data geupdate wordt                                | once every year        | verplicht |
-| description_uk    | extra veld voor toelichtingen                                  |                        |           |
+| description_uk    | extra veld voor toelichtingen in engels                        |                        |           |
 : 4 vertaling Engels  
   
 
@@ -92,8 +92,8 @@ Voor de juiste `thema` en `eenheid` moet gekozen worden uit voorgedefinieerde li
   
 ## Berekende indicatoren {#sec-calc}
   
-Naast het aanleveren van cijfers over indicatoren is er de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. De cijfer worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.
-
+Naast het aanleveren van cijfers over indicatoren is er de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. Deze cijfers worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.  
+  
 Om cijfers automatisch te laten uitrekenen moet in de metadata bij de betreffende indicator de rekenformule worden toegevoegd in het attribuut `calculation`. De rekenformule kent strikte notatieregels:  
   
 -   iedere indicator moet beginnen met een "\$"\
@@ -108,19 +108,21 @@ Hieronder staan twee voorbeeldformules:
   
 ## Extra attr {#sec-attr}
   
-In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij `BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag`.  
+In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie. 
   
   
-`-  {"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bev_totaal": "1000", "BBGA_sd_minimum_wvoor_bag": "20"}`
+- `{"BBGA_sort": 250, "BBGA_kleurenpalet": 9, "BBGA_peildatum": "1 april", "BBGA_reference_date": "1 April", "BBGA_sd_minimum_bev_totaal": "1000", "BBGA_sd_minimum_wvoor_bag": "20"}`
   
   
-`BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers.  
+`BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers. Indien bbga_sort niet wordt ingevuld
    
 `BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
   
-`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.
+De data bij `BBGA_peildatum` en `BBGA_reference_date` worden in het dashboard kerncijfers toegevoegd bij de beschrijving van de variabele, bron en definitie.
 
+`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.
+wanneer extreme waarden of uitbijters niet meegenomen worden in de berekening.
 
 ## dry run en import
 
-Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een dry-run uit en vervolgens een import. De indicatoren staan nu in de hub.
+Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een `dry-run` uit en vervolgens een `import`. De indicatoren zijn nu toegevoegd aan de hub.
