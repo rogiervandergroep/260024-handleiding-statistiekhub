@@ -37,8 +37,8 @@ Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, 
 | definition        | omschrijving                                                   | Aandeel Vestigingen    | verplicht |
 | unit              | meeteenheid                                                    | percentage             | verplicht |
 | decimals          | aantal decimalen afronding in publicatietabel                  | 0                      | verplicht |
-| source            | minimaal een bron                                              | LISA                   | verplicht |
-| temporal_type     | boolean: peildatum (TRUE) of niet (FALSE)                      | TRUE                   | verplicht |
+| source            | minimaal een bron, meerdere bronnen scheiden met "|"           | LISA                   | verplicht |
+| temporal_type     | twee opties: "peildatum"of "periode"                           | peildatum              | verplicht |
 | sensitive         | boolean: sensitive (TRUE) of niet (FALSE)                      | FALSE                  | verplicht |
 : 2 Verplichte velden  
    

@@ -22,7 +22,7 @@ book:
     - cijfers.qmd
     - privacy.qmd
     - indicatoren.qmd
-    - api.qmd
+    # - api.qmd
 
 #bibliography: references.bib
 
