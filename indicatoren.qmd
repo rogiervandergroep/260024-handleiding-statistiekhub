@@ -13,12 +13,11 @@ Het bestand kan eveneens geupload worden op de volgende site:
   
 Nadat je bent ingelogd op de website, kan je via de knop `import` het csv-bestand importeren.  
   
-- Bij `format` kan je kiezen tussen `csv` of `semicolon csv`. 
-- Bij `Name of model to import` geef je `observation` aan. 
+- Bij `format` kan je kiezen tussen `csv` of `semicolon csv`. Semicolon geniet de voorkeur.
+- Bij `name of model to import` geef je `measure` aan. 
    
 Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, sommigen zijn optioneel.
   
-
 ## Opbouw indicatorenbestand voor de Statistiekhub
 
 ::: {style="font-size: 0.8em;"}
@@ -57,7 +56,7 @@ Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, 
 |-------------------|----------------------------------------------------------------|------------------------| ----------|
 | label_uk          | korte omschrijving engels                                      | Firms (%)              | verplicht |
 | definition_uk     | omschrijving engels                                            | Percentage of Firms    | verplicht |
-| label_uk_short    | nog kortere omschrijving tbv visualisaties                     | Vestigingen (%)        | verplicht |
+| label_uk_short    | nog kortere omschrijving tbv visualisaties                     | Firms  (%)             | verplicht |
 | frequency_uk      | mate waarin data geupdate wordt                                | once every year        | verplicht |
 | description_uk    | extra veld voor toelichtingen                                  |                        |           |
 : 4 vertaling Engels  
