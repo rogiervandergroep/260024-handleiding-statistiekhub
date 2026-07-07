@@ -21,9 +21,9 @@ Nadat je bent ingelogd op de beheerwebsite, kan je via de knop `add import job` 
 - Bij `format` kies je voor `csv` of `semicolon csv`, waarbij semicolon de voorkeur geniet.
 - Bij `Name of model to import` geef je `observation` aan.  
   
-Voordat de cijfers gepubliceerd worden, moeten alle metadata van de indicatoren met de juiste `temporal_type`, de juiste ruimtelijke indelingen in de Statistiekhub aanwezig zijn. Hierop wordt gecontroleerd bij de import (zie @sec-dryrun). Als je cijfers toevoegt van nieuwe indicatoren die nog niet de hub staan moet je deze met de bijbehorende metadata eerst zelf toevoegen (zie @sec-indicatoren).  
+Voordat de cijfers gepubliceerd worden, moeten alle metadata van de indicatoren met de juiste `temporal_type`, de juiste ruimtelijke indelingen in de Statistiekhub aanwezig zijn. Hierop wordt gecontroleerd bij de import (zie @sec-dryrun). Als je cijfers toevoegt van nieuwe indicatoren die nog niet in de hub staan moet je deze met de bijbehorende metadata eerst zelf toevoegen (zie @sec-indicatoren).  
   
-De geleverde cijfers moeten de volgende kolommen bevatten en is opgebouwd volgens het principe van een `long format`: d.w.z dat de dataset slechts één kolom met numerieke waardes bevat.  
+De geleverde cijfers bevatten de volgende kolommen en zijn opgebouwd volgens het principe van een `long format`: d.w.z dat de dataset slechts één kolom met numerieke waardes bevat.  
   
 ::: {style="font-size: 0.8em;"}  
     

@@ -84,7 +84,7 @@ In de toekomst kan de inicatorenlijst aangevuld worden met onderstaande velden i
 - `dimension` voor het structuren van indicatoren met verschillende dimensies (denk aan herkomst en leeftijd)
 - `parent` (voor het koppelen van indicatoren in een hierarchische structuur)
   
-Hoewel geen officiele richtlijn, adviseren wij om de `name` van een indicator aan te laten sluiten op een `thema` en de `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
+Hoewel geen officiele richtlijn, adviseren wij om de `name` van een indicator aan te laten sluiten op een `thema` en `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
   
 `<afkorting thema>_indicatornaam_<afkorting eenheid>` voorbeeld: `o_havo_p`  
   
@@ -120,9 +120,8 @@ In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de 
   
 De data bij `BBGA_peildatum` en `BBGA_reference_date` worden in het dashboard kerncijfers toegevoegd bij de beschrijving van de variabele, bron en definitie.
 
-`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.
-wanneer extreme waarden of uitbijters niet meegenomen worden in de berekening.
+`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden, wanneer extreme waarden of uitbijters niet meegenomen mogen worden in de berekening.
 
 ## dry run en import
 
-Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een `dry-run` uit en vervolgens een `import`. De indicatoren zijn nu toegevoegd aan de hub.
+Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een `dry-run` uit en vervolgens een'echte' `import`. De indicatoren zijn nu toegevoegd aan de hub.

@@ -2,11 +2,11 @@
    
 Op deze website leren we jou hoe je data kan toevoegen aan de Statistiekhub. De Statistiekhub is de centrale locatie waar onderzoekers van Onderzoek & Statistiek van de Gemeente Amsterdam op een gestructureerde manier gegevens kunnen opslaan.  
   
-Niet alle data zijn geschikt voor de Statistiekhub: in principe is 'de Hub' bedoeld voor de opslag van data die structureel door onderzoek en statistiek verzameld wordt die op **meerdere aggregatieniveaus** leverbaar zijn, bijvoorbeeld op niveau van buurt, wijk, GGW-Gebied, Stadsdeel en gemeente. 
+Niet alle data zijn geschikt voor de Statistiekhub: in principe is 'de Hub' bedoeld voor de opslag van data die structureel door onderzoek en statistiek verzameld worden en die op meerdere aggregatieniveaus leverbaar zijn, bijvoorbeeld op niveau van buurt, wijk, GGW-Gebied, stadsdeel en gemeente. 
   
 Daarnaast is het mogelijk om data op gemeenteniveau van de Metropoolregio Amsterdam toe te voegen en data met afwijkende gebiedsindelingen zoals de gebiedsindeling van de [Veiligheidsmonitor](https://onderzoek.amsterdam.nl/interactief/dashboard-veiligheid), de gebiedsindeling van [Wonen in de Metropoolregio Amsterdam](https://onderzoek.amsterdam.nl/publicatie/wimra-2025-factsheets-per-gemeente) en bijvoorbeeld van de winkelgebieden. 
   
-In principe worden alleen gebiedsindelingen opgenomen in de hub die vastgesteld zijn door de gemeente Amsterdam. Uitzondering worden gemaakt voor gebiedsindelingen die al over een langere periode structureel gebruikt worden door Onderzoek en Statistiek voor onderzoeksdoeleinden, zie ook:[statistieken bij O&S](https://onderzoek.amsterdam.nl/artikel/nieuwe-toegang-tot-actuele-statistieken).
+In principe worden alleen gebiedsindelingen opgenomen in de hub die vastgesteld zijn door de gemeente Amsterdam. Uitzondering worden gemaakt voor gebiedsindelingen die al over een langere periode structureel gebruikt worden door Onderzoek en Statistiek voor onderzoeksdoeleinden, zie ook [statistieken bij O&S](https://onderzoek.amsterdam.nl/artikel/nieuwe-toegang-tot-actuele-statistieken).
   
 De portal van de Statistiekhub is hier:  
 - [https://statistiekhub.amsterdam.nl/](https://statistiekhub.amsterdam.nl/)  
