@@ -16,7 +16,8 @@ book:
   sidebar:
     logo: images/logo-gemeente-amsterdam-large.svg
     search: false
-  date: 19-05-2026
+  date: today
+  date-format: "D MMMM YYYY"
   chapters:
     - index.qmd
     - cijfers.qmd
