@@ -82,17 +82,17 @@ In de toekomst kan de inicatorenlijst aangevuld worden met onderstaande velden i
   
 - `filter` voor het realiseren van deelverzamelingen (denk aan tabel kerncijfers of tabel veiligheidsmonitor)  
 - `dimension` voor het structuren van indicatoren met verschillende dimensies (denk aan herkomst en leeftijd)
-- `parent` (voor het koppelen van indicatoren in een hierarchische structuur)
+- `parent` (voor het koppelen van indicatoren in een hiërarchische structuur)
   
-Hoewel geen officiele richtlijn, adviseren wij om de `name` van een indicator aan te laten sluiten op een `thema` en `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
+Hoewel geen officiële richtlijn, adviseren wij om de `name` van een indicator aan te laten sluiten op een `thema` en `unit`. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid `aantal` is, gebruik dan geen suffix. 
   
 `<afkorting thema>_indicatornaam_<afkorting eenheid>` voorbeeld: `o_havo_p`  
   
-Voor de juiste `thema` en `eenheid` moet gekozen worden uit voorgedefinieerde lijst. Deze kan je terugvinden onder het kopje `referentie tabellen` in de Statistiekhub. Neem contact op met de beheerder, indien jouw gewenste thema of eenheid niet in de lijst staat.  
+Bij de attributen `thema` en `eenheid` worden de thema's gekozen uit voorgedefinieerde lijsten. Deze twee lijsten staan onder de kop `referentie tabellen` in de Statistiekhub. Neem contact op met de beheerder als jouw gewenste thema of eenheid niet in de lijst staat.  
+   
+## Berekende indicatoren {#sec-calc}  
   
-## Berekende indicatoren {#sec-calc}
-  
-Naast het aanleveren van cijfers over indicatoren is er de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. Deze cijfers worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.  
+Naast het aanleveren van cijfers over indicatoren bestaat de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. Deze cijfers worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.  
   
 Om cijfers automatisch te laten uitrekenen moet in de metadata bij de betreffende indicator de rekenformule worden toegevoegd in het attribuut `calculation`. De rekenformule kent strikte notatieregels:  
   
@@ -108,20 +108,27 @@ Hieronder staan twee voorbeeldformules:
   
 ## Extra attr {#sec-attr}
   
-In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie. 
+In het veld `Extra attr` kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek. Daarnaast wordt dit veld gebruikt om extra regels toe te voegen voor het berekenen van de standaarddeviatie. 
   
   
-- `{"BBGA_sort": 250, "BBGA_kleurenpalet": 9, "BBGA_peildatum": "1 april", "BBGA_reference_date": "1 April", "BBGA_sd_minimum_bev_totaal": "1000", "BBGA_sd_minimum_wvoor_bag": "20"}`
+- `{
+"BBGA_sort": 250,  
+"BBGA_kleurenpalet": 9,  
+"BBGA_peildatum": "1 april",  
+"BBGA_reference_date": "1 April",  
+"BBGA_sd_minimum_bev_totaal": "1000",  
+"BBGA_sd_minimum_wvoor_bag": "20" 
+}`
   
   
-`BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers. Indien bbga_sort niet wordt ingevuld
+`BBGA_sort` wordt gebruikt voor de volgorde in rolluik indicator van het Dashboard Kerncijfers. Indien bbga_sort niet is ingevuld wordt de alfabetische volgorde aangehouden.  
    
-`BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
+`BBGA_kleurenpalet` bepaalt de kleurschakering in de figuren: 1 is van rood (laag en negatief) naar groen (hoog en positief); 2 van groen (laag en positief) naar rood (hoog en negatief); 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.  
   
-De data bij `BBGA_peildatum` en `BBGA_reference_date` worden in het dashboard kerncijfers toegevoegd bij de beschrijving van de variabele, bron en definitie.
-
-`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden, wanneer extreme waarden of uitbijters niet meegenomen mogen worden in de berekening.
-
-## dry run en import
-
-Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een `dry-run` uit en vervolgens een'echte' `import`. De indicatoren zijn nu toegevoegd aan de hub.
+De data bij `BBGA_peildatum` en `BBGA_reference_date` worden in het dashboard kerncijfers toegevoegd bij de beschrijving van de variabele, bron en definitie.  
+  
+`BBGA_sd_minimum_bev_totaal` en `BBGA_sd_minimum_wvoor_bag` zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden, wanneer extreme waarden of uitbijters niet meegenomen mogen worden in de berekening.  
+  
+## dry run en import  
+  
+Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geïmporteerd. Voer eerst een `dry-run` uit en vervolgens een'echte' `import`. De indicatoren zijn nu toegevoegd aan de hub.  

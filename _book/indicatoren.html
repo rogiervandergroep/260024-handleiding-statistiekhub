@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ed079fa2a75e75fb7383cde5b06d328.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-80e34d1e6d31c1184f6d795251187ee6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,29 +59,21 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
   }
 }</script>
 
 
-
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:_dlc_DocId msdt:dt="string">U2C65YR22MK2-1659662025-274567</mso:_dlc_DocId>
-<mso:_dlc_DocIdItemGuid msdt:dt="string">25401de6-324b-4b67-b441-7dbfcaece87a</mso:_dlc_DocIdItemGuid>
-<mso:_dlc_DocIdUrl msdt:dt="string">https://hoofdstad.sharepoint.com/sites/SW-DII-DATA-DAFDOES/_layouts/15/DocIdRedir.aspx?ID=U2C65YR22MK2-1659662025-274567, U2C65YR22MK2-1659662025-274567</mso:_dlc_DocIdUrl>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
@@ -96,11 +88,11 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./indicatoren.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Indicatoren toevoegen aan de statistiekhub</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -177,10 +169,10 @@ ul.task-list li input[type="checkbox"] {
 <p><code>http://statistiekhub.amsterdam.nl/import_export_job/importjob/</code></p>
 <p>Nadat je bent ingelogd op de website, kan je via de knop <code>import</code> het csv-bestand importeren.</p>
 <ul>
-<li>Bij <code>format</code> kan je kiezen tussen <code>csv</code> of <code>semicolon csv</code>.</li>
-<li>Bij <code>Name of model to import</code> geef je <code>observation</code> aan.</li>
+<li>Bij <code>format</code> kan je kiezen tussen <code>csv</code> of <code>semicolon csv</code>. Semicolon geniet de voorkeur.</li>
+<li>Bij <code>name of model to import</code> geef je <code>measure</code> aan.</li>
 </ul>
-<p>Het csv-bestand moet onderstaande attributen bevatten. Een aantal is verplicht, sommigen zijn optioneel.</p>
+<p>Het csv-bestand moet onderstaande attributen bevatten. Sommigen zijn verplicht, anderen optioneel.</p>
 </section>
 <section id="opbouw-indicatorenbestand-voor-de-statistiekhub" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="opbouw-indicatorenbestand-voor-de-statistiekhub"><span class="header-section-number">3.2</span> Opbouw indicatorenbestand voor de Statistiekhub</h2>
@@ -210,8 +202,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>themes</td>
-<td>thema’s, waartoe de indicator gerekend kan worden</td>
-<td>Economie, Wonen</td>
+<td>thema’s, miimaal een thema, meerdere thema’s scheiden met pipe-symbol</td>
+<td>Economie| Wonen</td>
 <td>min. een</td>
 </tr>
 </tbody>
@@ -235,20 +227,20 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>name</td>
-<td>naam indicator, is de measure uit observ.</td>
-<td>vest_p</td>
+<td>naam van de indicator, is gelijk aan <code>measure</code> uit <code>observations</code></td>
+<td>vestr_p</td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
 <td>label</td>
 <td>korte omschrijving</td>
-<td>Vestigingen (%)</td>
+<td>aandeel vestigingen in de sector R: cultuur, sport en recreatie (%)</td>
 <td>verplicht</td>
 </tr>
 <tr class="odd">
 <td>definition</td>
-<td>omschrijving</td>
-<td>Aandeel Vestigingen</td>
+<td>omschrijving van de indicator en methode</td>
+<td></td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
@@ -259,19 +251,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>decimals</td>
-<td>aantal decimalen afronding in publicatietabel</td>
+<td>aantal decimalen voor afronding in publicatietabellen</td>
 <td>0</td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
 <td>source</td>
-<td>minimaal een bron, meerdere bronnen scheiden met pipe-teken</td>
-<td>LISA</td>
+<td>minimaal een bron, meerdere bronnen worden gescheiden met het pipe-symbol</td>
+<td>LISA| bewerking O&amp;S</td>
 <td>verplicht</td>
 </tr>
 <tr class="odd">
 <td>temporal_type</td>
-<td>twee opties: “peildatum”of “periode”</td>
+<td>twee opties: “peildatum” of “periode”</td>
 <td>peildatum</td>
 <td>verplicht</td>
 </tr>
@@ -303,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>label_short</td>
 <td>nog kortere omschrijving tbv visualisaties</td>
-<td>Vestigingen (%)</td>
+<td>vest. sector R (%)</td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
@@ -314,19 +306,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>description</td>
-<td>extra veld voor toelichtingen</td>
+<td>extra veld voor toelichtingen op indicator of berekening</td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Parent</td>
-<td>veld om hierarchie in indiactoren te definieren</td>
+<td>veld om hierarchie in indicatoren te definieren</td>
 <td>nog niet actief</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Dimension</td>
-<td>veld subset te definieren</td>
+<td>veld om subset te definieren</td>
 <td>nog niet actief</td>
 <td></td>
 </tr>
@@ -352,19 +344,19 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>label_uk</td>
 <td>korte omschrijving engels</td>
-<td>Firms (%)</td>
+<td>firms in branche R: culture, sports and recreation (%)</td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
 <td>definition_uk</td>
-<td>omschrijving engels</td>
-<td>Percentage of Firms</td>
+<td>beschrijving van de indicator en methode in engels</td>
+<td></td>
 <td>verplicht</td>
 </tr>
 <tr class="odd">
 <td>label_uk_short</td>
 <td>nog kortere omschrijving tbv visualisaties</td>
-<td>Vestigingen (%)</td>
+<td>firms in branche R (%)</td>
 <td>verplicht</td>
 </tr>
 <tr class="even">
@@ -375,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>description_uk</td>
-<td>extra veld voor toelichtingen</td>
+<td>extra veld voor toelichtingen in engels</td>
 <td></td>
 <td></td>
 </tr>
@@ -401,13 +393,13 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>calculation</td>
 <td>formule voor berekende waarde</td>
-<td>zie <a href="#sec-calc" class="quarto-xref"><span>Section 3.3</span></a></td>
+<td>zie <a href="#sec-calc" class="quarto-xref"><span>Paragraaf 3.3</span></a></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Extra atrr</td>
 <td>json-veld voor styling dashboard</td>
-<td>zie <a href="#sec-attr" class="quarto-xref"><span>Section 3.4</span></a></td>
+<td>zie <a href="#sec-attr" class="quarto-xref"><span>Paragraaf 3.4</span></a></td>
 <td></td>
 </tr>
 </tbody>
@@ -457,13 +449,13 @@ ul.task-list li input[type="checkbox"] {
 <li><code>dimension</code> voor het structuren van indicatoren met verschillende dimensies (denk aan herkomst en leeftijd)</li>
 <li><code>parent</code> (voor het koppelen van indicatoren in een hierarchische structuur)</li>
 </ul>
-<p>Hoewel geen officiele richtlijn, adviseren wij om de <code>name</code> van een indicator aan te laten sluiten op een <code>thema</code> en de <code>unit</code>. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid <code>aantal</code> is, gebruik dan geen suffix.</p>
+<p>Hoewel geen officiele richtlijn, adviseren wij om de <code>name</code> van een indicator aan te laten sluiten op een <code>thema</code> en <code>unit</code>. Dat betekent dat in de naam met een prefix verwezen kan worden naar het bijbehorende thema en de suffix naar de juiste eenheid. Als de eenheid <code>aantal</code> is, gebruik dan geen suffix.</p>
 <p><code>&lt;afkorting thema&gt;_indicatornaam_&lt;afkorting eenheid&gt;</code> voorbeeld: <code>o_havo_p</code></p>
 <p>Voor de juiste <code>thema</code> en <code>eenheid</code> moet gekozen worden uit voorgedefinieerde lijst. Deze kan je terugvinden onder het kopje <code>referentie tabellen</code> in de Statistiekhub. Neem contact op met de beheerder, indien jouw gewenste thema of eenheid niet in de lijst staat.</p>
 </section>
 <section id="sec-calc" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-calc"><span class="header-section-number">3.3</span> Berekende indicatoren</h2>
-<p>Naast het aanleveren van cijfers over indicatoren is er de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. De cijfer worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.</p>
+<p>Naast het aanleveren van cijfers over indicatoren is er de mogelijkheid om cijfers automatisch te laten uitrekenen, bijvoorbeeld het percentage mannen op de totale bevolking. Deze cijfers worden dan uitgerekend voor indicatoren met dezelfde temporele én ruimtelijke dimensie. Vanzelfsprekend moeten de cijfers van de indicatoren in de rekenformule wel al zijn toegevoegd om te kunnen rekenen. Indien er cijfers van automatisch te berekenen indicatoren zijn aangeleverd, dan hebben deze voorrang op de automatisch berekende cijfers.</p>
 <p>Om cijfers automatisch te laten uitrekenen moet in de metadata bij de betreffende indicator de rekenformule worden toegevoegd in het attribuut <code>calculation</code>. De rekenformule kent strikte notatieregels:</p>
 <ul>
 <li>iedere indicator moet beginnen met een “$”<br>
@@ -484,15 +476,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-attr" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="sec-attr"><span class="header-section-number">3.4</span> Extra attr</h2>
-<p>In het veld <code>Extra attr</code> kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie, wanneer extreme waarden of uitbijters niet meegenomen worden in de berekekning. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten. Dit doe je bij <code>BBGA_sd_minimum_bev_totaal</code> en <code>BBGA_sd_minimum_wvoor_bag</code>.</p>
-<p><code>-  {"BBGA_sort": 250, "BBGA_kleurenpalet": 9,  "BBGA_sd_minimum_bev_totaal": "1000", "BBGA_sd_minimum_wvoor_bag": "20"}</code></p>
-<p><code>BBGA_sort</code> wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers.</p>
+<p>In het veld <code>Extra attr</code> kan informatie opgenomen worden voor de styling van de figuren in het Dashboard Kerncijfers op de website van Onderzoek en Statistiek en om extra regels toe te voegen voor het berekenen van standaarddeviatie.</p>
+<ul>
+<li><code>{ "BBGA_sort": 250,   "BBGA_kleurenpalet": 9,   "BBGA_peildatum": "1 april",   "BBGA_reference_date": "1 April",   "BBGA_sd_minimum_bev_totaal": "1000",   "BBGA_sd_minimum_wvoor_bag": "20"  }</code></li>
+</ul>
+<p><code>BBGA_sort</code> wordt gebruikt voor de volgorde in rolluik indicator van het dashboard kerncijfers. Indien bbga_sort niet wordt ingevuld</p>
 <p><code>BBGA_kleurenpalet</code> bepaalt de kleurschakering in de figuren: 1 is van rood naar groen; 2 van groen naar rood; 9 wordt gebruikt voor absolute waarden. Als er geen data is geleverd op wijkniveau of als er geen Amsterdams gemiddelde is meegegeven dan worden geen standaardafwijkingen berekend en dan worden de stoplichtkleuren vervangen door groentinten.</p>
-<p><code>BBGA_sd_minimum_bev_totaal</code> en <code>BBGA_sd_minimum_wvoor_bag</code> zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden.</p>
+<p>De data bij <code>BBGA_peildatum</code> en <code>BBGA_reference_date</code> worden in het dashboard kerncijfers toegevoegd bij de beschrijving van de variabele, bron en definitie.</p>
+<p><code>BBGA_sd_minimum_bev_totaal</code> en <code>BBGA_sd_minimum_wvoor_bag</code> zijn minimumwaardes van wijken waarop standaarddeviaties berekend worden, wanneer extreme waarden of uitbijters niet meegenomen mogen worden in de berekening.</p>
 </section>
 <section id="dry-run-en-import" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="dry-run-en-import"><span class="header-section-number">3.5</span> dry run en import</h2>
-<p>Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een dry-run uit en vervolgens een import. De indicatoren staan nu in de hub.</p>
+<p>Op een vergelijkbare manier als bij het importeren van cijfers worden nu de indicatoren geimporteerd. Voer eerst een <code>dry-run</code> uit en vervolgens een’echte’ <code>import</code>. De indicatoren zijn nu toegevoegd aan de hub.</p>
 
 
 </section>
@@ -523,12 +518,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Gekopieerd!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Gekopieerd!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

@@ -1,6 +1,6 @@
 # Welkom {.unnumbered}
    
-Op deze website leren we jou hoe je data kan toevoegen aan de Statistiekhub. De Statistiekhub is de centrale locatie waar onderzoekers van Onderzoek & Statistiek van de Gemeente Amsterdam op een gestructureerde manier gegevens kunnen opslaan.  
+Op deze website wordt uitgelegd hoe je data kan toevoegen aan de Statistiekhub. De Statistiekhub is de centrale locatie waar onderzoekers van Onderzoek & Statistiek van de gemeente Amsterdam op een gestructureerde manier gegevens kunnen opslaan.  
   
 Niet alle data zijn geschikt voor de Statistiekhub: in principe is 'de Hub' bedoeld voor de opslag van data die structureel door onderzoek en statistiek verzameld worden en die op meerdere aggregatieniveaus leverbaar zijn, bijvoorbeeld op niveau van buurt, wijk, GGW-Gebied, stadsdeel en gemeente. 
   

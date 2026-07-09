@@ -3,18 +3,16 @@
 
 ## Import Jobs
 
-Nieuwe cijfers (`observations`) voegen we toe of wijzigen we via de beheerwebsite van de statistiekhub. Je kan alleen cijfers toevoegen van indicatoren die zijn toegekend aan jouw `team`.
+Nieuwe cijfers (`observations`) worden toegevoegd of gewijzigd via de beheerwebsite van de statistiekhub. Je kan alleen cijfers toevoegen van indicatoren die zijn toegekend aan jouw `team`.
 
 Plaats het definitieve csv-bestand in de map `Statistiekhub\data_verwerking\04 0 data voor export`, zodat we alle gegevens ook centraal hebben opgeslagen in ADW. De databestanden in deze map kunnen ook als voorbeeld dienen voor de opbouw van je eigen bestand.
 
-Zorg dat het bestand voldoet aan heldere naamgeving zoals: `<datum>_<team>_cijfers.csv`, bijvoorbeeld:
-  
-`20230208_veiligheid_cijfers.csv`  
+Zorg dat het bestand voldoet aan heldere naamgeving zoals: `<datum>_<team>_cijfers.csv`, bijvoorbeeld: `20230208_veiligheid_cijfers.csv`  
   
 Ga vervolgens naar de beheerwebsite voor het toevoegen of wijzigen van nieuwe cijfers  
 `http://statistiekhub.amsterdam.nl/import_export_job/importjob/`  
 
-Nadat je bent ingelogd op de beheerwebsite, kan je via de knop `add import job` het csv-bestand importeren. Je komt op onderstaande pagina terecht.
+Nadat je bent ingelogd op de beheerwebsite, kan je via de knop `add import job` het csv-bestand importeren. Je komt op deze pagina terecht.
 
 ![](images/hub_import.png) 
   

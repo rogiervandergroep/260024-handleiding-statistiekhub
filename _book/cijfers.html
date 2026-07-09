@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3ed079fa2a75e75fb7383cde5b06d328.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-80e34d1e6d31c1184f6d795251187ee6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,29 +60,21 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden",
+    "search-label": "Zoeken"
   }
 }</script>
 
 
-
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:_dlc_DocId msdt:dt="string">U2C65YR22MK2-1659662025-274569</mso:_dlc_DocId>
-<mso:_dlc_DocIdItemGuid msdt:dt="string">59054ef3-acc2-4e57-868b-e44e804273c2</mso:_dlc_DocIdItemGuid>
-<mso:_dlc_DocIdUrl msdt:dt="string">https://hoofdstad.sharepoint.com/sites/SW-DII-DATA-DAFDOES/_layouts/15/DocIdRedir.aspx?ID=U2C65YR22MK2-1659662025-274569, U2C65YR22MK2-1659662025-274569</mso:_dlc_DocIdUrl>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
@@ -97,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cijfers.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Cijfers toevoegen aan de statistiekhub</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Schakel zijbalknavigatie" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -172,25 +164,20 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="import-jobs" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="import-jobs"><span class="header-section-number">1.1</span> Import Jobs</h2>
-<p>Nieuwe cijfers (<code>observations</code>) (voor BBGA of voor andere publicatietabellen) voegen we toe of wijzigen we via de beheerwebsite van de statistiekhub. Je kan alleen cijfers toevoegen van indicatoren die zijn toegekend zijn aan jouw <code>team</code>.</p>
-<p>Plaats het definitieve csv-bestand in de map <code>Statistiekhub\data_verwerking\04 0 data voor export</code>, zodat we alle gegevens ook centraal hebben staan. Zorg dat het bestand voldoet aan de volgende naamgeving: <code>&lt;datum&gt;_&lt;team&gt;_cijfers.csv</code>, bijvoorbeeld:</p>
+<p>Nieuwe cijfers (<code>observations</code>) voegen we toe of wijzigen we via de beheerwebsite van de statistiekhub. Je kan alleen cijfers toevoegen van indicatoren die zijn toegekend aan jouw <code>team</code>.</p>
+<p>Plaats het definitieve csv-bestand in de map <code>Statistiekhub\data_verwerking\04 0 data voor export</code>, zodat we alle gegevens ook centraal hebben opgeslagen in ADW. De databestanden in deze map kunnen ook als voorbeeld dienen voor de opbouw van je eigen bestand.</p>
+<p>Zorg dat het bestand voldoet aan heldere naamgeving zoals: <code>&lt;datum&gt;_&lt;team&gt;_cijfers.csv</code>, bijvoorbeeld:</p>
 <p><code>20230208_veiligheid_cijfers.csv</code></p>
 <p>Ga vervolgens naar de beheerwebsite voor het toevoegen of wijzigen van nieuwe cijfers<br>
 <code>http://statistiekhub.amsterdam.nl/import_export_job/importjob/</code></p>
 <p>Nadat je bent ingelogd op de beheerwebsite, kan je via de knop <code>add import job</code> het csv-bestand importeren. Je komt op onderstaande pagina terecht.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/hub_import.png" class="img-fluid figure-img"></p>
-<figcaption>Afbeelding website add import jobs</figcaption>
-</figure>
-</div>
+<p><img src="images/hub_import.png" class="img-fluid"></p>
 <ul>
-<li>Bij <code>format</code> kan je kiezen tussen <code>csv</code> of <code>semicolon csv</code>.<br>
-</li>
+<li>Bij <code>format</code> kies je voor <code>csv</code> of <code>semicolon csv</code>, waarbij semicolon de voorkeur geniet.</li>
 <li>Bij <code>Name of model to import</code> geef je <code>observation</code> aan.</li>
 </ul>
-<p>Voordat de cijfers gepubliceerd worden, moeten alle metadata van de indicatoren met de juiste <code>temporal_type</code>, de juiste ruimtelijke indelingen en juiste <code>units</code> (aantal, percentage, km2 etc.) in de Statistiekhub aanwezig zijn. Hierop wordt gecontroleerd bij de import. In de metadata is aangeven of de data over een <code>periode</code> gaat dan wel <code>peildatum</code> betreft. Hier wordt ook op gecontroleerd bij het invoeren van de cijfers.</p>
-<p>De geleverde cijfers moeten de volgende zeven kolommen bevatten en is opgebouwd volgens het principe van een <code>long format</code>: d.w.z dat de dataset slechts één kolom met numerieke waardes bevat.</p>
+<p>Voordat de cijfers gepubliceerd worden, moeten alle metadata van de indicatoren met de juiste <code>temporal_type</code>, de juiste ruimtelijke indelingen in de Statistiekhub aanwezig zijn. Hierop wordt gecontroleerd bij de import (zie <a href="#sec-dryrun" class="quarto-xref"><span>Paragraaf 1.4</span></a>). Als je cijfers toevoegt van nieuwe indicatoren die nog niet in de hub staan moet je deze met de bijbehorende metadata eerst zelf toevoegen (zie <a href="indicatoren.html" class="quarto-xref"><span>Hoofdstuk 3</span></a>).</p>
+<p>De geleverde cijfers bevatten de volgende kolommen en zijn opgebouwd volgens het principe van een <code>long format</code>: d.w.z dat de dataset slechts één kolom met numerieke waardes bevat.</p>
 <div style="font-size: 0.8em;">
 <table class="caption-top table">
 <caption>Tabel 1 Opbouw databestand voor de Statistiekhub</caption>
@@ -240,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>value</td>
 <td>(niet afgeronde) waarde van de indicator</td>
-<td>3.754297</td>
+<td>2,71828</td>
 </tr>
 </tbody>
 </table>
@@ -248,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ruimtelijke-dimensie" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="ruimtelijke-dimensie"><span class="header-section-number">1.2</span> ruimtelijke dimensie</h2>
-<p>Op basis van de items <code>spatial_code</code>, <code>spatial_type</code> en <code>spatial_date</code> is het mogelijk om een unieke ruimtelijke dimensie te realiseren. Spatial_date (de datum van de gebiedsindeling) is hierbij nodig omdat er soms (grens)wijzigingen en ruimtelijke herindelingen plaatsvinden. De laatste belangrijke gebiedswijziging voor Amsterdam vond plaats op 24 maart 2022, toen Weesp en Amsterdam werden samengevoegd tot een gemeente. De kans is groot dat je de gebiedsindeling gebruikt op basis van deze laatste wijziging. De spatial_date is in dit geval <code>20220324</code>. ALs je opnieuw historische data aanlevert zal dat in het algemeen ook via de nieuwe gebiedsindeling zijn.</p>
+<p>Op basis van de items <code>spatial_code</code>, <code>spatial_type</code> en <code>spatial_date</code> is het mogelijk om een unieke ruimtelijke dimensie te realiseren. Spatial_date (de datum van de gebiedsindeling) is hierbij nodig omdat er soms (grens)wijzigingen en ruimtelijke herindelingen plaatsvinden. De laatste belangrijke gebiedswijziging voor Amsterdam vond plaats op 24 maart 2022, toen Weesp en Amsterdam zijn samengevoegd tot één gemeente. De kans is groot dat je de gebiedsindeling gebruikt op basis van deze laatste wijziging. De spatial_date is in dit geval <code>20220324</code>. Als je opnieuw historische data aanlevert zal dat in het algemeen ook via de nieuwe gebiedsindeling zijn.</p>
 <p><code>Spatial_type</code> heeft betrekking op het type gebied. De meest gangbare indeling waar onderzoekers statistieken op berekenen zijn:</p>
 <ul>
 <li>Bedrijventerrein<br>
@@ -279,25 +266,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="temporele-dimensie" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="temporele-dimensie"><span class="header-section-number">1.3</span> temporele dimensie</h2>
-<p>Op basis van de <code>temporal_date</code> en <code>temporal_type</code> is het mogelijk een unieke tijdseenheid te realiseren. Als de indicator een waarde op een bepaald moment laat zien, gebruik dan als temporal_type ‘peildatum’.</p>
-<p>Indien de gegevens over een periode gaan vul dan de betreffende periode in. Voorbeelden van gegevens over een periode zijn bijvoorbeeld het aantal werklozen, geboortes, misdrijven en startende ondernemingen in een jaar, kwartaal of maand. Een statistiek met als <code>temporal_date</code> <code>20210101</code> en <code>temporal_type</code> <code>jaar</code> betreft dus een statistiek over het jaar 2021 (van 1 januari 2021 tot 1 januari 2022). Je vult dus de startdatum in van de periode waar je data over gaat. Zoals eerder aangegeven geef je in de metadata ook aan of de data een <code>periode</code> of <code>peildatum</code> betreft. Ook hier geldt dat wanneer de data op een andere manier wordt aangeboden dan aangegeven in de metadata dat je dan een foutmelding krijgt.</p>
+<p>Op basis van de <code>temporal_date</code> en <code>temporal_type</code> is het mogelijk een unieke tijdseenheid te realiseren. Als de indicator een waarde op een bepaald moment laat zien, gebruik dan als temporal_type <code>peildatum</code>. De meeste data zullen als temporal_type peildatum hebben. Dit geldt ook voor enquetedata.</p>
+<p>Indien de gegevens over een periode gaan vul dan de betreffende periode in. Voorbeelden van gegevens over een periode zijn bijvoorbeeld het aantal werklozen, geboortes, misdrijven en startende ondernemingen in een jaar, kwartaal of maand. Een statistiek met als <code>temporal_date</code> <code>20210101</code> en <code>temporal_type</code> <code>jaar</code> betreft dus een statistiek over het jaar 2021 (van 1 januari 2021 tot 1 januari 2022). Je vult dus de startdatum in van de periode waar je data over gaan. Zoals eerder aangegeven geef je in de metadata ook aan of de data <code>periode</code> of <code>peildatum</code> betreffen. Ook hier geldt dat je een foutmelding krijgt wanneer de data op een andere manier worden aangeboden dan aangegeven in de metadata.</p>
 </section>
-<section id="dry-run-en-import" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="dry-run-en-import"><span class="header-section-number">1.4</span> dry run en import</h2>
-<p>Druk vervolgens onderaan op <code>save</code>. Daarna kom je terug in scherm ‘import jobs’ waar het geuploade bestand verschijnt.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/hub_import2.png" class="img-fluid figure-img"></p>
-<figcaption>Afbeelding website add import jobs</figcaption>
-</figure>
-</div>
-<p>Vink vervolgens dit bestand aan en selecteer bij <code>Action</code>: <code>perform dry-run</code>. Met een dry-run wordt getest of de aangeleverde data voldoen aan de voorwaarden. Er verschijnt een foutmelding als dit niet geval is. Bij <code>summary of changes made by this import</code> wordt duidelijk waar de fouten zitten.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/hub_import1.png" class="img-fluid figure-img"></p>
-<figcaption>Afbeelding website add import jobs</figcaption>
-</figure>
-</div>
+<section id="sec-dryrun" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="sec-dryrun"><span class="header-section-number">1.4</span> dry run en import</h2>
+<p>Druk vervolgens onderaan op <code>save</code>. Daarna kom je terug in het scherm ‘import jobs’ waar het geuploade bestand verschijnt.</p>
+<p><img src="images/hub_import2.png" class="img-fluid"></p>
+<p>Vink vervolgens dit bestand aan en selecteer bij <code>Action</code>: <code>perform dry-run</code>. Met een dry-run wordt getest of de aangeleverde data voldoen aan de voorwaarden. Er verschijnt een foutmelding als dit niet geval is. Bij <code>summary of changes made by this import</code> wordt na aanklikken van de html-link duidelijk waar de fouten zitten.</p>
+<p><img src="images/hub_import1.png" class="img-fluid"></p>
 <p>Als er geen foutmelding verschijnt kan je onder <code>summary of changes</code> de import controleren en bestuderen welke data zijn toegevoegd of geupdated.</p>
 <p>Vervolgens vink je weer het bestand aan en selecteer je bij <code>Action</code>: <code>perform import</code>.</p>
 <p>De data staan nu echt in de hub.</p>
@@ -331,12 +308,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Gekopieerd!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Gekopieerd!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
